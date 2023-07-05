@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Calcular total</title>
+</head>
+<body>
+    <section class="main">
+            <div class="main_card">
+                <img src="./assets/img/hp-img.png" alt="hp-lapto" class="main_card_img">
+                <h4>Laptop HP gamer</h4>
+                <p>V/Unit: <span class="Vunit">$2.500.000</span></p>
+                <input class="cantidad" type="number" min="1" placeholder="Cantidad">  
+                <!-- <input class="colorclass" type="text" placeholder="Color"> -->
+                <div class="SectionColor">
+                <p>Seleccione el Color:  </p>
+                <select id="Selector">
+                    <option value="black">Negro</option>
+                    <option value="red">Rojo</option>
+                    <option value="blue">azul</option> 
+                    <option value="grey">Gris</option>
+                </select>
+                </div>
+                <button class="bttnCalcular" onclick="
+                let Cantidad = document.querySelector('.cantidad').value;
+                let Selector = document.querySelector('#Selector').value;
+                // let ColorClass = document.querySelector('.colorclass').value;
+                let Vunit = 2500000;
+                let TotalProduct = 0;
+                TotalProduct = Vunit * Cantidad;
+                let TotalSelect =document.querySelector('.TotalSelect');
+                let ColorSelect = document.querySelector('.ColorSelect');
+                let CantidadSelect =document.querySelector('.CantidadSelect');
+                TotalSelect.innerHTML = TotalProduct.toLocaleString();
+                CantidadSelect.innerHTML = Cantidad;
+                ColorSelect.style.backgroundColor = Selector;
+                ">Calcular total</button>
+            </div>
+        <div>
+            <p>Total: $ <span class="TotalSelect">0</span></p>
+            <p>Cantidad: <span class="CantidadSelect">0</span></p>
+            <div class="sectionColor">
+            <p>Color: </p>
+            <div class="ColorSelect"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

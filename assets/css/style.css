@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 350px;
+    background-color: rgb(191, 177, 252);
+}
+.main_card_img{
+    width: 70%;
+}
+.bttnCalcular{
+    width: 60%;
+}
+.sectionColor{
+    display: flex;
+    gap: 10px;
+}
+.ColorSelect{
+    width: 15px;
+    height: 15px;
+    border: 1px black solid;
+    border-radius: 50%;
+    background-color: black;
+}
+.selector option{
+    width: 80%;
+}
+.SectionColor{
+    display: flex;
+    align-items: center;
+}
+.SectionColor p{
+    font-size: 12px;
+    padding-right: 10px;
+}
